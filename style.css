@@ -665,8 +665,8 @@ body{
 
 .floating-vacancy{
     left: 0 !important;
-    bottom: 25%;
-    transform:  translateY(50%) !important;
+    bottom: 35%;
+    transform:  translateY(75%) !important;
 
     width: auto !important;
     flex-direction: column;
