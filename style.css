@@ -1,0 +1,718 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.no-scroll{
+    overflow: hidden;
+    height: 100%;
+}
+
+/* 定義 */
+@keyframes fadeInUp{
+    from{opacity: 0; transform: translateY(30px);}
+    to{ opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideDown {
+    from{transform: translateY(-100%);}
+    to{transform: translateY(0);}
+}
+
+@keyframes fadeIn{
+    from{ opacity: 0;}
+    to{opacity: 1;}
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    scroll-margin-top :100px;
+}
+
+body{
+    
+}
+
+.hero-section{
+    background-image: url('AdobeStock_536711412.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.navbar{
+    background-color: rgba(250, 250, 250, 0.8);
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transform:  translateY(-100%);
+    animation: slideDown 0.8s ease 2.5s forwards;
+    z-index: 9999;
+
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo{
+    
+    font-family: "MS PMincho";
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+  
+}
+
+.logo a{
+    text-decoration: none;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.contact-btn{
+    background-color: #e67e22;
+    color: white !important;
+}
+
+.contact-btn:hover{
+    background-color: #d35400 !important;
+}
+
+.hero-text{
+    position: absolute;
+    right: 5%;
+    top:130px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: 40px;
+   
+}
+
+
+.sub-text{
+   
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-family:"MS PMincho";
+    font-size: 3rem;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+
+    opacity: 0;
+    animation: fadeInUp 1s ease 1s forwards;
+}
+
+.hero-text h2 {
+    color: white;
+    font-family: "MS PMincho";
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.6;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+    margin-top: 550px;
+    opacity: 0;
+    margin-top: 550px;
+
+    animation: fadeInUp 1s ease 1.8s forwards;
+}
+
+/* お部屋紹介 */
+.room-info{
+    padding: 80px 0;
+    background-color: #fdfdfd;
+    color: #333;
+    text-align: center;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title{
+    text-align: center;
+    font-family:"MS PMincho" ;
+    font-size: 3rem;
+    margin-bottom: 80px;
+    color: #000;
+}
+
+.section-title::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: #e67e22;
+}
+
+/* お部屋紹介 */
+
+.room-info{
+    padding: 100px 0;
+    margin-top: 50px;
+}
+
+.room-flex{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+
+}
+
+.room-text {
+    flex: 1;
+    text-align: left;
+}
+
+.room-text h3 {
+    font-family: "MS PMincho";
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.room-text p{
+    line-height: 2;
+    font-size: 1.1rem;
+    margin-bottom: 30px ;
+}
+
+.room-image{
+    width: 50%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.room-image img{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+
+/* お食事 */
+
+.food-info{
+    padding: 100px 0;
+    margin-top: 50px;
+}
+
+.food-flex{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 100px;
+
+
+}
+
+.food-text {
+    flex: 1;
+    text-align: left;
+}
+
+.food-text h3 {
+    font-family: "MS PMincho";
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+.food-text h4 {
+    font-family: "MS PMincho";
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.food-text p{
+    line-height: 2;
+    font-size: 1.1rem;
+    margin-bottom: 30px ;
+}
+
+.food-image{
+    width: 50%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.food-image img{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+
+/* 設備 */
+
+.setubi-info{
+    padding: 100px 0;
+    background-color: #fdfdfd;
+    margin-top: 50px;
+}
+
+.setubi-flex{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+
+}
+
+.setubi-text {
+    flex: 1;
+    text-align: left;
+}
+
+.setubi-text h3 {
+    font-family: "MS PMincho";
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.setubi-text p{
+    line-height: 2;
+    font-size: 1.1rem;
+    margin-bottom: 30px ;
+}
+
+.setubi-image{
+    width: 50%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.setubi-image img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* 体操やカラオケなど */
+
+.taisou-info{
+    padding: 100px 0;
+    margin-top: 50px;
+}
+
+.taisou-flex{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 100px;
+
+
+}
+
+.taisou-text {
+    flex: 1;
+    text-align: left;
+}
+
+.taisou-text h3 {
+    font-family: "MS PMincho";
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+.taisou-text h4 {
+    font-family: "MS PMincho";
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.taisou-text p{
+    line-height: 2;
+    font-size: 1.1rem;
+    margin-bottom: 30px ;
+}
+
+.taisou-image{
+    width: 50%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.taisou-image img{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* お問い合わせ */
+.inquiry-info{
+    padding: 100px 0;
+    background-color: #fdfdfd;
+    margin-top: 50px;
+}
+
+.inquiry-text p{
+    text-align: center;
+    font-family: "MS PMincho";
+    font-size: 2rem;
+    margin-bottom: 30px ;
+}
+
+.fade-in{
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.fade-in.is-visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.room-info,.food-info,.setubi-info,.taisou-info,.inquiry-info{
+    position: relative;
+    z-index: 1;
+}
+
+.footer-bar{
+    background-color: rgba(250, 250, 250, 0.95);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 40px 0 20px 0;
+    color: #333;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-copy{
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.footer-info p{
+    font-family: ;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: left;
+}
+
+
+.footer-btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 30px !important;
+    font-size: 1.1rem;
+}
+
+
+.floating-vacancy{
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background-color: #fffaf5;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e67e22;
+
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: fit-content;
+    z-index: 10000;
+    border: 2px solid #e67e22;
+
+    display: flex ;
+    opacity: 0;
+    transform: translateY(20px) ;
+    transition: all 0.8s ease-out;
+}
+
+.floating-vacancy.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.vacancy-content{
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #fffaf5;
+    margin: 0;
+}
+
+.vacancy-dot{
+    width: 8px;
+    height: 8px;
+    background-color: #2ecc71;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{opacity: 1;}
+    50%{opacity: 0.3;}
+    100%{opacity: 1;}
+}
+
+.vacancy-text{
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+#room-count{
+    color: #d35400;
+    font-size: 1.2rem;
+    margin: 0 2px;
+}
+
+.vacancy-btn{
+    background-color: #e67e22;
+    color: white !important;
+    text-align: center;
+    text-decoration: none;
+    
+    margin: 10px;
+    border-radius: 50px;
+    padding: 8px 20px;
+    
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.vacancy-btn:hover{
+    background-color: #d35400;
+}
+
+
+
+@media screen and (max-width:768px) {
+
+    .nav-container{
+        padding: 10px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links{
+        gap:5px;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+
+    .hero-text{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+        
+    }
+
+    .hero-text h2 {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        margin-top: 200px !important;
+        letter-spacing: 0.15rem;
+        line-height: 1.8;
+        font-size: 1.6rem;
+        margin: 0 auto;
+        height: auto;
+        max-width: 70vh;
+        text-align: left;
+        line-height:1.6;
+
+
+
+        text-indent: 1.2rem;
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .sub-text{
+        font-size: 2rem;
+    }
+
+    .hero-text .sub-text{
+        writing-mode: vertical-rl;
+        
+    }
+
+    .hero-text h2 {
+        font-size: 1.8rem;
+        margin-top: 300px;
+    }
+
+
+    .room-flex,.setubi-flex,.food-flex,.taisou-flex{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        max-width: 1000px;
+        margin:  0 auto;
+    }
+
+    .room-flex,.setubi-flex{
+        flex-direction: column !important;
+    }
+
+    .food-flex,.taisou-flex{
+        flex-direction: column-reverse !important;
+        display: flex;
+    }
+
+    .room-text,.food-text,.setubi-text,.taisou-text{
+        flex: 0 1 450px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .room-image,.food-image,.setubi-image,.taisou-image{
+        width: 100% !important;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .section-title{
+        font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+
+.footer-container{
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-info p {
+    text-align: center;
+}
+
+.floating-vacancy{
+    left: 0 !important;
+    bottom: 50%;
+    transform:  translateY(50%) !important;
+
+    width: auto !important;
+    flex-direction: column;
+    border-radius: 0 10px 10px 0;
+    border-left: none;
+}
+
+.vacancy-content{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding: 20px 10px;
+    letter-spacing: 0.1em;
+}
+
+.vacancy-dot{
+    margin-bottom: 10px;
+    margin: 0;
+}
+
+.vacancy-text{
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.vacancy-btn{
+    width: 100% !important;
+    border-radius: 0;
+    margin: 0 !important;
+    padding: 15px 5px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 0.8rem;
+}
+
+.tate-chu-yoko{
+    text-combine-upright: all;
+    -webkit-text-combine-upright:all;
+
+    font-family: sans-serif;
+    font-weight: bold;
+    margin: 2px 0;
+}
+    
+}
+
+

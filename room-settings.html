@@ -1,0 +1,71 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理者画面-空き部屋数</title>
+    <style>
+        body{font-family: sans-serif; background-color: #f4f7f6;display: flex;
+        justify-content: center;padding: 40px;}
+
+        .admin-card{background: white ; padding: 30px; border-radius: 15px;box-shadow: 0 4px rgba(0,0,0,0.1); width: 100%; max-width: 400px;}
+        h1{font-size: 1.2rem; color: #333; margin-bottom: 20px;border-left: 5px solid #e67e22; padding-left: 10px;}
+
+        .input-group {margin-bottom: 20px;}
+        label{ display: block; font-size: 0.9rem; margin-bottom: 8px; color: #666;}
+        input[type="number"]{width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1.2rem; box-sizing: border-box;}
+
+        .preview-area{background: #fffaf5; border: 1px dashed #e67e22; padding: 15px; border-radius: 10px; margin-bottom: 20px; text-align: center; }
+        .preview-label{font-size: 0.8rem; color: #e67e22; margin-bottom: 5px; font-weight: bold;}
+        #preview-value{font-size: 1.5rem; font-weight: bold; color: #333;}
+
+        button{width: 100%; background: #e67e22; color: white; border: none; padding: 15px; border-radius: 8px; font-size: 1rem; font-weight: bold; cursor: pointer;transition: 0.3s;}
+        button:hover{background: #d35400;}
+        .msg{margin-top: 15px; font-size: 0.8rem; color: #27ae60; text-align: center;display: none;}
+    </style>
+</head>
+<body>
+    <div class="admin-card">
+    <h1>空き部屋数設定</h1>
+
+    <div class="input-group">
+        <label for="room-input">現在の空き部屋数</label>
+        <input type="number" id="room-input" value="10" min="0" oninput="updatePreview()">
+    </div>
+
+    <div class="preview-area">
+        <div class="preview-label">公式サイトでの表示プレビュー</div>
+        <div id="preview-value">10</div>
+    </div>
+
+    <button onclick="saveData()">決定して反映する</button>
+    <div id="save-msg" class="msg">公式サイトに反映しました。</div>
+
+    <div id="admin-room-count" style="display: none;">10</div>
+    
+    </div>
+    
+    <script>
+        function updatePreview(){
+            const val =document.getElementById('room-input').value;
+            document.getElementById('preview-value').textContent = val;
+        }
+
+        function saveData() {
+            const val = document.getElementById('room-input').value;
+             document.getElementById('admin-room-count').textContent = val;
+
+            const msg =document.getElementById('save-msg');
+            msg.style.display = 'block';
+
+            setTimeout(() => {msg.style.display = 'none';},3000);
+            
+            
+        }
+
+       
+    </script>
+</body>
+</html>
