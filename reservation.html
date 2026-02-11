@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>体験予約入力フォーム</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    .reservation-section {
+        padding: 50px 0 60px;
+        background-color: #f9f9f9;
+        min-height: 100vh;
+    }
+
+    .form-container{
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    }
+
+    form-group{
+        margin-bottom: 25px;
+    }
+
+    form-group label{
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #333;
+    }
+
+    form-group label span{
+        color: #e67e22;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        background: #fff4ed;
+        border-radius: 4px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 5px solid #ddd;
+        border-radius: 8px;
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+.submit-btn{
+    width: 100%;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 18px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 1.3s;
+}
+
+.submit-btn:hover{
+    background-color: #d35400 ;
+}
+
+.back-link{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    text-decoration: none;
+}
+</style>
+</head>
+<body>
+    <section class="reservation-section">
+        <div class="container">
+            <h2 class="section-title">体験予約フォーム</h2>
+
+            <div class="form-container">
+                <form action="thanks.html" method="GET"><div class="form-group">
+                    <label>お名前<span>必須</span></label>
+                    <input type="text" name="name" placeholder="鳥取 太郎" required>
+                </div>
+               <div class="form-group">
+                    <label>お電話番号<span>必須</span></label>
+                    <input type="tel" name="tel" placeholder="0859-00-0000" required>
+                </div>
+               <div class="form-group">
+                    <label>メールアドレス</label>
+                    <input type="email" name="email" placeholder="example@mail.com" >
+                </div>
+                <div class="form-group">
+                    <label>ご希望の体験日<span>必須</span></label>
+                    <input type="date" name="date"  required>
+                </div>
+                <div class="form-group">
+                    <label>体験人数</label>
+                    <select name="count">
+                        <option value="1">1名</option>
+                        <option value="2">2名</option>
+                        <option value="3">3名以上（その他・ご希望へ）</option>
+                    </select>
+                    
+                </div>
+
+                <div class="form-group">
+                    <label>その他・ご希望</label>
+                    <textarea name="message" rows="4" placeholder="車椅子での見学希望など、お気軽にご記入ください。"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">この内容で予約を申し込む</button>
+                </form>
+
+                <a href="index.html" class="back-link">ホームへ戻る</a>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
